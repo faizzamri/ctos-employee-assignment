@@ -1,5 +1,6 @@
 import { PencilIcon, PlusIcon, TrashIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
+import { deleteEmployee } from '@/app/lib/actions';
 
 export function CreateEmployee() {
   return (
@@ -25,12 +26,13 @@ export function UpdateEmployee({ id }: { id: number }) {
 }
 
 export function DeleteEmployee({ id }: { id: number }) {
+  const deleteEmployeeWithId = deleteEmployee.bind(null, id);
   return (
-    <>
+    <form action={deleteEmployeeWithId}>
       <button className="rounded-md border p-2 hover:bg-gray-100">
         <span className="sr-only">Delete</span>
         <TrashIcon className="w-5" />
       </button>
-    </>
+    </form>
   );
 }
