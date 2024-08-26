@@ -12,10 +12,12 @@ const FormSchema = z.object({
     }),
     salary: z.coerce
         .number()
-        .gt(0, { message: 'Please enter an amount greater than $0.' }),
+        .int({ message: 'Please enter decimal amount only' })
+        .positive({ message: 'Please enter an amount greater than $0.' }),
     age: z.coerce
         .number()
-        .gt(0, { message: 'Age must be larger than 0' }),
+        .int({ message: 'Please enter a valid age' })
+        .positive({ message: 'Please enter a valid age' }),
     image_url: z.string(),
 });
 
