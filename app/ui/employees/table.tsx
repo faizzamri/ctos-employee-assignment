@@ -11,7 +11,6 @@ export default async function EmployeesTable({
   currentPage: number;
 }) {
   const employees = await fetchFilteredEmployees(query, currentPage);
-
   return (
     <div className="mt-6 flow-root">
       <div className="inline-block min-w-full align-middle">
@@ -26,7 +25,7 @@ export default async function EmployeesTable({
                   <div>
                     <div className="mb-2 flex items-center">
 
-                      <p>{employee.name}</p>
+                      <p>{employee.name.substring(0,25)}</p>
                     </div>
                     <p className="text-xl font-medium">
                       {formatCurrency(employee.salary)}
@@ -83,7 +82,7 @@ export default async function EmployeesTable({
                   <td className="whitespace-nowrap py-3 pl-6 pr-3">
                     <div className="flex items-center gap-3">
 
-                      <p>{employee.name}</p>
+                      <p>{employee.name.substring(0,25)}</p>
                     </div>
                   </td>
                   <td className="whitespace-nowrap px-3 py-3">
