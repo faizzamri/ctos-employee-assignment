@@ -1,5 +1,4 @@
 import Pagination from '@/app/ui/employees/pagination';
-import Search from '@/app/ui/search';
 import Table from '@/app/ui/employees/table';
 import { CreateEmployee } from '@/app/ui/employees/buttons';
 import { lusitana } from '@/app/ui/fonts';
