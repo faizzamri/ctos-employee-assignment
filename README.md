@@ -1,5 +1,20 @@
-## Next.js App Router Course - Starter
+## CTOS Assesment : Employee Details
 
-This is the starter template for the Next.js App Router Course. It contains the starting code for the dashboard application.
+This is the assessment for CTOS as part of the job application. 
 
-For more information, see the [course curriculum](https://nextjs.org/learn) on the Next.js Website.
+The technologies use:<br/>
+- Next.js
+- React.js
+- Typescript
+- Zod
+- Tailwind CSS
+- Clsx
+- Debounce
+
+Template use: 
+- Acme
+  
+Production and Database Setup:
+- Vercel
+
+For the view, see the [live version](https://ctos-employee-assignment-eight.vercel.app/listing/employees) for the assessment.
